@@ -1,3 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
+
+:root {
+  --primary: #36413E;
+  --secondary: #5D5E60;
+  --muted: #8D8D92;
+  --accent: #BEB2C8;
+  --background: #D7D6D6;
+  --font-heading: 'Merriweather', serif;
+  --font-body: 'Source Sans Pro', sans-serif;
+}
+
 body {
-  background-color: black;
+  background-color: var(--background);
 }
