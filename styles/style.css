@@ -4,11 +4,11 @@
 
 /*$ Color & fonts variables */
 :root {
-  --primary: #36413E;
-  --secondary: #5D5E60;
-  --muted: #8D8D92;
-  --accent: #BEB2C8;
-  --background: #D7D6D6;
+  --primary: #474350;
+  --secondary: #fcffeb;
+  --muted: #fafac6;
+  --accent: #fecdaa;
+  --background: #f8fff4;
   --font-heading: 'Merriweather', serif;
   --font-body: 'Source Sans Pro', sans-serif;
 }
@@ -17,4 +17,110 @@ body {
   margin: 0;
   padding: 0;
   background-color: var(--background);
+}
+
+.sidebar {
+  margin: 0;
+  padding: 0;
+  background-color: var(--primary);
+  height: 100vh;
+  width: 240px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+}
+
+.logo-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 15px 10px;
+  justify-content: space-between;
+  height: 30px;
+  border-bottom: solid;
+  border-color: var(--accent);
+  margin-bottom: 0;
+}
+
+.logo {
+
+  color: var(--secondary);
+  font-family: var(--font-heading);
+  font-size: 24px;
+}
+
+.logo-container button {
+  color: var(--secondary);
+  cursor: pointer;
+  font-size: 24px;
+  border: none;
+  background: none;
+}
+
+.search-container {
+  padding: 0px;
+  display: flex;
+  align-items: center;
+  margin: 40px 0px 5px 0px;
+  justify-content: center;
+}
+
+.search-container input {
+  width: 80%;
+  padding: 4px 10px;
+  border-radius: 8px;
+  border: none;
+  font-size: 14px;
+  height: 35px;
+  font-family: var(--font-body);
+  font-size: medium;
+  background-color: var(--background);
+
+}
+
+.middle-container {
+  padding-top: 0;
+  flex-grow: 1;
+}
+
+.navigation {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+  list-style: none;
+  margin-top: 10px;
+  padding: 20px 18px;
+  flex-grow: 1;
+}
+
+.navigation li a {
+  color: var(--secondary);
+  text-decoration: none;
+  font-family: var(--font-body);
+  font-size: 18px;
+
+}
+
+.navigation li {
+  padding: 15px 0px;
+}
+
+.navigation li a i {
+  padding: 0px 8px 0px 8px;
+}
+
+.sidebar.active {
+  width: 50px;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.sidebar {
+  transform: translateX(0);
+  transition: transform 0.3s ease-in-out;
 }

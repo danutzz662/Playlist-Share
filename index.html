@@ -13,10 +13,21 @@
   </head>
   <body>
     <!--$ Side bar -->
-    <div class="sidebar">
+    <div class="sidebar" id="sidebar">
       <div class="logo-container">
-        <i class="fa-solid fa-circle-play"></i>
-        <span>PlayShare</span>
+        <div class="logo">
+          <i class="fa-solid fa-circle-play"></i>
+          <span>PlayShare</span>
+        </div>
+        <button class="toggle-sidebar"><i class="fa-solid fa-bars"></i></button>
+      </div>
+      <div class="search-container">
+        <input
+          type="text"
+          id="search"
+          name="search"
+          placeholder="Search a Playlist"
+        />
       </div>
       <div class="middle-container">
         <ul class="navigation">
@@ -50,14 +61,33 @@
               <span class="nav-text">Your Playlists</span>
             </a>
           </li>
+          <li>
+            <a href="">
+              <i class="fa-solid fa-heart"></i>
+              <span class="nav-text">Liked Playlists</span>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <i class="fa-solid fa-envelope"></i>
+              <span class="nav-text">Messages</span>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <i class="fa-solid fa-gear"></i>
+              <span class="nav-text">Settings</span>
+            </a>
+          </li>
         </ul>
       </div>
       <div class="bottom">
         <div class="user">
-          <img src="" alt="" />
+          <img src="/assets/7397-dexter.png" alt="User image" width="50px" />
           <i class="fa-solid fa-circle-left"></i>
         </div>
       </div>
     </div>
+    <script src="js/app.js"></script>
   </body>
 </html>
