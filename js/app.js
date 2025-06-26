@@ -1,3 +1,4 @@
+// $ Menu collapse
 let btn = document.querySelector(".toggle-sidebar");
 let sidebar = document.querySelector(".sidebar");
 

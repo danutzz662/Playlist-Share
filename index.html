@@ -4,6 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/styles/style.css" />
+    <link
+      rel="shortcut icon"
+      href="/assets/circle-play-solid.svg"
+      type="image/x-icon"
+    />
     <!--@ Icons Import -->
     <script
       src="https://kit.fontawesome.com/75b7d98650.js"
@@ -14,10 +19,11 @@
   <body>
     <!--$ Side bar -->
     <div class="sidebar" id="sidebar">
+      <!--$ Header -->
       <div class="logo-container">
         <div class="logo">
-          <i class="fa-solid fa-circle-play"></i>
-          <span>PlayShare</span>
+          <a href="#"><i class="fa-solid fa-circle-play"></i></a>
+          <a href="#" class="logo-text">PlayShare</a>
         </div>
         <button class="toggle-sidebar"><i class="fa-solid fa-bars"></i></button>
       </div>
@@ -28,7 +34,9 @@
           name="search"
           placeholder="Search a Playlist"
         />
+        <button><i class="fa-solid fa-magnifying-glass"></i></button>
       </div>
+      <!--$ Navigation links -->
       <div class="middle-container">
         <ul class="navigation">
           <li>
@@ -36,56 +44,67 @@
               <i class="fa-solid fa-house"></i>
               <span class="nav-text">Home</span>
             </a>
+            <span class="tooltip">Home</span>
           </li>
           <li>
             <a href="">
               <i class="fa-solid fa-share-nodes"></i>
               <span class="nav-text">Share a Playlist</span>
             </a>
+            <span class="tooltip">Share a Playlist</span>
           </li>
           <li>
             <a href="">
               <i class="fa-solid fa-compass"></i>
               <span class="nav-text">Browse Playlists</span>
             </a>
+            <span class="tooltip">Browse Playlists</span>
           </li>
           <li>
             <a href="">
               <i class="fa-solid fa-circle-plus"></i>
               <span class="nav-text">Add Playlist</span>
             </a>
+            <span class="tooltip">Add Playlist</span>
           </li>
           <li>
             <a href="">
               <i class="fa-solid fa-certificate"></i>
               <span class="nav-text">Your Playlists</span>
             </a>
+            <span class="tooltip">Your Playlists</span>
           </li>
           <li>
             <a href="">
               <i class="fa-solid fa-heart"></i>
               <span class="nav-text">Liked Playlists</span>
             </a>
+            <span class="tooltip">Liked Playlists</span>
           </li>
           <li>
             <a href="">
               <i class="fa-solid fa-envelope"></i>
               <span class="nav-text">Messages</span>
             </a>
+            <span class="tooltip">Messages</span>
           </li>
           <li>
             <a href="">
               <i class="fa-solid fa-gear"></i>
               <span class="nav-text">Settings</span>
             </a>
+            <span class="tooltip">Settings</span>
           </li>
         </ul>
       </div>
+      <!--$ Side bar footer -->
       <div class="bottom">
         <div class="user">
-          <img src="/assets/7397-dexter.png" alt="User image" width="50px" />
-          <i class="fa-solid fa-circle-left"></i>
+          <a href="#"
+            ><img src="/assets/7397-dexter.png" alt="User image" width="50px"
+          /></a>
         </div>
+        <div class="logout"><i class="fa-solid fa-circle-left"></i></div>
       </div>
     </div>
     <script src="js/app.js"></script>
