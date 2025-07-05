@@ -17,6 +17,8 @@ body {
   margin: 0;
   padding: 0;
   background-color: var(--background);
+  display: flex;
+  height: 100vh;
 }
 
 /*$ Sidebar alligment */
@@ -45,6 +47,7 @@ body {
   justify-content: space-between;
   height: 30px;
   border-bottom: solid;
+  border-right: solid;
   border-color: var(--accent);
   margin-bottom: 0;
 
@@ -147,9 +150,14 @@ body {
 
 /*$Tooltip design */
 .navigation li .tooltip {
+  display: none;
+}
+
+.sidebar.active .navigation li .tooltip {
   position: absolute;
   left: 60px;
   top: 50%;
+  display: initial;
   transform: translateY(-50%);
   background-color: var(--primary);
   color: var(--background);
@@ -165,7 +173,7 @@ body {
 
 }
 
-.navigation li:hover .tooltip {
+.sidebar.active .navigation li:hover .tooltip {
   opacity: 1;
   pointer-events: auto;
 }
@@ -263,4 +271,39 @@ body {
 .sidebar.active .bottom img {
   width: 45px;
   height: 45px;
+}
+
+/*$ Main body */
+.main {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin-left: 240px;
+  height: 100%;
+  transition: margin-left 0.2s ease-in-out;
+}
+
+
+body.sidebar-collapsed .main {
+  margin-left: 60px;
+}
+
+.main-top {
+  display: flex;
+  align-items: center;
+  height: 60px;
+  background-color: var(--primary);
+  padding-left: 10px;
+  border-bottom: solid;
+  border-color: var(--accent);
+  margin-bottom: 0;
+
+
+}
+
+.display-title span {
+  font-family: var(--font-heading);
+  color: var(--secondary);
+  font-size: 32px;
+  font-weight: 500;
 }
